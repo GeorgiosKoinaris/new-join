@@ -1,0 +1,52 @@
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #2a3647;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.navigationButtons {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  color: #cdcdcd;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  img {
+    padding-right: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #091931;
+  }
+}
+
+.secundaryButton {
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #cdcdcd;
+  &:hover {
+    cursor: pointer;
+  }
+}
