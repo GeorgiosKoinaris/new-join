@@ -1,0 +1,20 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.userImg {
+  margin-left: 15px;
+  border-radius: 100px;
+  background-color: #a8a8a8;
+  width: 45px;
+}
