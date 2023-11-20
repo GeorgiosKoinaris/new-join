@@ -1,2 +1,22 @@
-<app-header></app-header>
+<!-- <app-header></app-header>
 <app-sidenav></app-sidenav>
+
+<div>
+  <router-outlet></router-outlet>
+</div> -->
+
+<!-- test für material -->
+
+<mat-drawer-container class="mat-drawer-container" autosize>
+  <mat-drawer [opened]="true" mode="side">
+    <app-sidenav class="sidenav"></app-sidenav>
+  </mat-drawer>
+
+  <div>
+    <app-header></app-header>
+
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-drawer-container>
