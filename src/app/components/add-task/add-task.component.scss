@@ -1,0 +1,24 @@
+h1 {
+  font-weight: 700;
+  font-size: 61px;
+  margin-bottom: 55px;
+}
+label {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.formContainer {
+  display: flex;
+  gap: 50px;
+}
+
+.partialContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.lineContainer {
+  border: 1px solid #d1d1d1;
+}
