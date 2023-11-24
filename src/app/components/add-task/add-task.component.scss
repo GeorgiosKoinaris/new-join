@@ -22,3 +22,78 @@ label {
 .lineContainer {
   border: 1px solid #d1d1d1;
 }
+
+.prioButtons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 22px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 145px;
+    height: 45px;
+    transition: transform 125ms;
+    img {
+      margin-left: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.submitFormBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 80px;
+  .createBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 165px;
+    height: 45px;
+    transition: transform 125ms;
+    background-color: #2a3647;
+    mat-icon {
+      margin-left: 5px;
+      color: white;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  }
+
+  .clearBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 145px;
+    height: 45px;
+    transition: transform 125ms;
+    background-color: white;
+    mat-icon {
+      margin-left: 5px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  }
+}
