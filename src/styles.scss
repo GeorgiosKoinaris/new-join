@@ -11,6 +11,10 @@ body {
   display: flex;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .d-column {
   display: flex;
   flex-direction: column;
