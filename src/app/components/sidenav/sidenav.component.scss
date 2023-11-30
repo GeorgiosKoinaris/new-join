@@ -29,6 +29,10 @@
   }
 }
 
+.menuButton.active {
+  background-color: #091931;
+}
+
 .secundaryButton {
   padding-left: 50px;
   padding-top: 10px;
@@ -38,4 +42,8 @@
     cursor: pointer;
     color: #29abe2;
   }
+}
+
+.secundaryButton.active {
+  background-color: #091931;
 }
