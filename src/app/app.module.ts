@@ -19,8 +19,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HelpUserComponent } from './components/help-user/help-user.component';
-import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [

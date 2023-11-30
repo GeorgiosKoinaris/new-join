@@ -5,8 +5,8 @@ import { BoardComponent } from './components/board/board.component';
 import { SummaryComponent } from './components/summary/summary.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { HelpUserComponent } from './components/help-user/help-user.component';
-import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   { path: 'summary', component: SummaryComponent },
