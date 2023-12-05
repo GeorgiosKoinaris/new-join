@@ -7,6 +7,12 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+h1 {
+  font-weight: 700 !important;
+  font-size: 61px !important;
+  margin-bottom: 55px !important;
+}
+
 .d-flex {
   display: flex;
 }
@@ -36,3 +42,9 @@ body {
   border-radius: 10px;
   background-color: white;
 }
+
+// .mat-mdc-form-field-bottom-align::before {
+//   content: none !important;
+//   display: none !important;
+//   height: 0 !important;
+// }
