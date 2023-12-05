@@ -10,6 +10,7 @@ div {
 
 .backArrow {
   img {
+    transition: 125ms ease-in-out;
     &:hover {
       cursor: pointer;
       border-radius: 100%;
