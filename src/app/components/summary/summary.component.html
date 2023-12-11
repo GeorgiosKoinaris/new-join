@@ -8,16 +8,26 @@
   <div class="d-flex">
     <div class="counterContainer">
       <div class="todo-done-container">
-        <div class="todo-done-box">
-          <img src="./assets/img/todoIcon.svg" alt="" />
+        <div
+          class="todo-done-box"
+          (mouseenter)="isTodoHovered = true"
+          (mouseleave)="isTodoHovered = false"
+        >
+          <img *ngIf="!isTodoHovered" src="./assets/img/todoIcon.svg" />
+          <img *ngIf="isTodoHovered" src="./assets/img/todoIcon_hover.svg" />
           <div class="counter">
             <span>1</span>
             <span>To-do</span>
           </div>
         </div>
 
-        <div class="todo-done-box">
-          <img src="./assets/img/doneIcon.svg" alt="" />
+        <div
+          class="todo-done-box"
+          (mouseenter)="isDoneHovered = true"
+          (mouseleave)="isDoneHovered = false"
+        >
+          <img *ngIf="!isDoneHovered" src="./assets/img/doneIcon.svg" />
+          <img *ngIf="isDoneHovered" src="./assets/img/doneIcon_hover.svg" />
           <div class="counter">
             <span>1</span>
             <span>Done</span>

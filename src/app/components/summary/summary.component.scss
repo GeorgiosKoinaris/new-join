@@ -36,6 +36,11 @@
   gap: 20px;
   transition: 125ms ease-in-out;
 
+  img {
+    width: 69px;
+    height: 69px;
+  }
+
   .counter {
     display: flex;
     flex-direction: column;
