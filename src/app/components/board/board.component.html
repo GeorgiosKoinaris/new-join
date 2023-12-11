@@ -16,27 +16,103 @@
     </div>
   </div>
 
-  <div class="boardContainer">
-    <div class="d-flex jc-between">
-      <div>To do</div>
-      <div class="addBtnContainer">
-        <mat-icon>add</mat-icon>
+  <!------------------------------------------ board Content starts here --------------------------------------------->
+
+  <div class="boardContent">
+    <!------------------- To do starts here ----------------->
+    <div class="section">
+      <div class="sectionHead">
+        <div>To do</div>
+        <div class="addBtnContainer">
+          <mat-icon>add</mat-icon>
+        </div>
+      </div>
+
+      <div class="sectionContent">
+        <div class="emptyContent">No tasks To do</div>
       </div>
     </div>
-    <div class="d-flex jc-between">
-      <div>In progress</div>
-      <div class="addBtnContainer">
-        <mat-icon>add</mat-icon>
+
+    <!------------------- in progress starts here ----------------->
+    <div class="section">
+      <div class="sectionHead">
+        <div>In progress</div>
+        <div class="addBtnContainer">
+          <mat-icon>add</mat-icon>
+        </div>
+      </div>
+
+      <div class="sectionContent">
+        <!-- <div class="emptyContent">No tasks In progress</div> -->
+        <div class="taskContainer">
+          <span class="categoryText">User Story</span>
+          <div class="titleText">Kochwelt Page & Recipe Recommender</div>
+          <div class="descriptionText">
+            Build start page with recipe recommendation...
+          </div>
+          <div class="d-flex jc-between mt-20">
+            <div class="assignedContacts">
+              <div class="contactImg">AM</div>
+              <div class="contactImg">AM</div>
+            </div>
+            <img src="./assets/img/prioIconMedi.svg" alt="" />
+          </div>
+        </div>
       </div>
     </div>
-    <div class="d-flex jc-between">
-      <div>Await feedback</div>
-      <div class="addBtnContainer">
-        <mat-icon>add</mat-icon>
+
+    <!------------------- await feedback starts here ----------------->
+    <div class="section">
+      <div class="sectionHead">
+        <div>Await feedback</div>
+        <div class="addBtnContainer">
+          <mat-icon>add</mat-icon>
+        </div>
+      </div>
+
+      <div class="sectionContent">
+        <!-- <div class="emptyContent">No tasks Await feedback</div> -->
+        <div class="taskContainer">
+          <span class="categoryText">User Story</span>
+          <div class="titleText">Kochwelt Page & Recipe Recommender</div>
+          <div class="descriptionText">
+            Build start page with recipe recommendation...
+          </div>
+          <div class="d-flex jc-between mt-20">
+            <div class="assignedContacts">
+              <div class="contactImg">AM</div>
+              <div class="contactImg">AM</div>
+            </div>
+            <img src="./assets/img/prioIconMedi.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="taskContainer">
+          <span class="categoryText">User Story</span>
+          <div class="titleText">Kochwelt Page & Recipe Recommender</div>
+          <div class="descriptionText">
+            Build start page with recipe recommendation...
+          </div>
+          <div class="d-flex jc-between mt-20">
+            <div class="assignedContacts">
+              <div class="contactImg">AM</div>
+              <div class="contactImg">AM</div>
+            </div>
+            <img src="./assets/img/prioIconMedi.svg" alt="" />
+          </div>
+        </div>
       </div>
     </div>
-    <div>
-      <div>Done</div>
+
+    <!------------------- done starts here ----------------->
+    <div class="section">
+      <div class="sectionHead">
+        <div>Done</div>
+      </div>
+
+      <div class="sectionContent">
+        <div class="emptyContent">No tasks Done</div>
+      </div>
     </div>
   </div>
 </div>

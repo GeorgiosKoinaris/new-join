@@ -73,10 +73,12 @@ input {
   }
 }
 
-.boardContainer {
+.boardContent {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 20px;
+  gap: 25px;
 }
 
 .addBtnContainer {
@@ -87,5 +89,84 @@ input {
   &:hover {
     cursor: pointer;
     color: #29abe2;
+  }
+}
+
+.section {
+  width: 250px;
+}
+
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  height: 30px;
+}
+
+.emptyContent {
+  border-radius: 10px;
+  border: 2px dotted #a8a8a8;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: #e7e7e7;
+  color: #a8a8a8;
+}
+
+.taskContainer {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+
+  .categoryText {
+    padding: 4px 10px;
+    color: white;
+    background-color: #0038ff;
+    border-radius: 10px;
+  }
+
+  .titleText {
+    margin-top: 20px;
+    font-weight: 700;
+  }
+
+  .descriptionText {
+    margin-top: 10px;
+    color: #a8a8a8;
+  }
+
+  .mt-20 {
+    margin-top: 20px;
+  }
+
+  .assignedContacts {
+    display: flex;
+    > .contactImg:not(:first-child) {
+      margin-left: -10px;
+    }
+  }
+
+  .contactImg {
+    padding: 8px;
+    border-radius: 100%;
+    background-color: #9327ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    font-size: 12px;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
