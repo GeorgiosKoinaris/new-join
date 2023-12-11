@@ -86,6 +86,7 @@ input {
   border-radius: 10px;
   height: 25px;
   width: 25px;
+  transition: 125ms ease-in-out;
   &:hover {
     cursor: pointer;
     color: #29abe2;
