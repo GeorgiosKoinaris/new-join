@@ -43,6 +43,10 @@ h1 {
   background-color: white;
 }
 
+.mat-typography {
+  line-height: unset !important;
+}
+
 // .mat-mdc-form-field-bottom-align::before {
 //   content: none !important;
 //   display: none !important;
