@@ -10,7 +10,7 @@ import { DialogAddTaskComponent } from 'src/app/dialog-add-task/dialog-add-task.
 export class BoardComponent {
   constructor(public dialog: MatDialog) {}
 
-  openDialog() {
+  openDialogToAddTask() {
     this.dialog.open(DialogAddTaskComponent);
   }
 }

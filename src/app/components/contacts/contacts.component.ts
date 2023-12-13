@@ -10,7 +10,7 @@ import { DialogAddNewContactComponent } from 'src/app/dialog-add-new-contact/dia
 export class ContactsComponent {
   constructor(public dialog: MatDialog) {}
 
-  openDialog() {
+  openDialogToAddContact() {
     this.dialog.open(DialogAddNewContactComponent);
   }
 }
