@@ -9,7 +9,7 @@
         </div>
       </div>
 
-      <button class="addTaskBtn">
+      <button class="addTaskBtn" (click)="openDialog()">
         Add Task
         <mat-icon>add</mat-icon>
       </button>
@@ -23,7 +23,7 @@
     <div class="section">
       <div class="sectionHead">
         <div>To do</div>
-        <div class="addBtnContainer">
+        <div class="addBtnContainer" (click)="openDialog()">
           <mat-icon>add</mat-icon>
         </div>
       </div>
@@ -37,7 +37,7 @@
     <div class="section">
       <div class="sectionHead">
         <div>In progress</div>
-        <div class="addBtnContainer">
+        <div class="addBtnContainer" (click)="openDialog()">
           <mat-icon>add</mat-icon>
         </div>
       </div>
@@ -65,7 +65,7 @@
     <div class="section">
       <div class="sectionHead">
         <div>Await feedback</div>
-        <div class="addBtnContainer">
+        <div class="addBtnContainer" (click)="openDialog()">
           <mat-icon>add</mat-icon>
         </div>
       </div>

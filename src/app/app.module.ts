@@ -21,6 +21,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { HelpUserComponent } from './components/help-user/help-user.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { DialogAddTaskComponent } from './dialog-add-task/dialog-add-task.component';
+import { DialogAddNewContactComponent } from './dialog-add-new-contact/dialog-add-new-contact.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,8 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     HelpUserComponent,
     LegalNoticeComponent,
     PrivacyPolicyComponent,
+    DialogAddTaskComponent,
+    DialogAddNewContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +52,7 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     MatNativeDateModule,
     MatButtonModule,
     MatIconModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
