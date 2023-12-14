@@ -1,1 +1,96 @@
-<p>dialog-add-task works!</p>
+<div class="dialogContainer">
+  <div class="d-flex jc-between">
+    <h2>Add Task</h2>
+    <div>
+      <mat-icon class="closeIcon" mat-dialog-close>close</mat-icon>
+    </div>
+  </div>
+  <form action="" class="formContainer">
+    <div class="firstPartialContainer">
+      <label>Title*</label>
+      <mat-form-field>
+        <mat-label>Enter a Title</mat-label>
+        <input matInput />
+      </mat-form-field>
+
+      <label>Description</label>
+      <mat-form-field>
+        <mat-label>Enter a description</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+
+      <label>Assignet to</label>
+      <mat-form-field>
+        <mat-label>Select contacts to assign</mat-label>
+        <mat-select disableRipple>
+          <mat-option value="1">Markus</mat-option>
+          <mat-option value="2">Peter</mat-option>
+          <mat-option value="3">Max</mat-option>
+          <mat-option value="4">Gustav</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="lineContainer"></div>
+
+    <div class="secondPartialContainer">
+      <label>Due date*</label>
+      <mat-form-field class="example-full-width">
+        <mat-label>Choose a date</mat-label>
+        <input
+          matInput
+          [matDatepickerFilter]="dateFilter"
+          [matDatepicker]="picker"
+        />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <label>Prio</label>
+      <div class="prioButtons">
+        <button>
+          Urgent
+          <img src="./assets/img/prioIconUrgent.svg" alt="" />
+        </button>
+        <button>
+          Medium <img src="./assets/img/prioIconMedi.svg" alt="" />
+        </button>
+        <button>Low <img src="./assets/img/prioIconLow.svg" alt="" /></button>
+      </div>
+
+      <label>Category*</label>
+      <mat-form-field>
+        <mat-label>Select an option</mat-label>
+        <mat-select disableRipple>
+          <mat-option value="1">Marketing</mat-option>
+          <mat-option value="2">Development</mat-option>
+          <mat-option value="3">Design</mat-option>
+          <mat-option value="4">Backoffice</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <label>Subtasks</label>
+      <mat-form-field>
+        <mat-label>Add new subtask</mat-label>
+        <input matInput />
+        <button matSuffix mat-icon-button>
+          <mat-icon>add</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <div class="submitFormBtnContainer">
+        <button class="clearBtn" mat-dialog-close>
+          Clear
+          <mat-icon>close</mat-icon>
+        </button>
+        <button class="createBtn">
+          Create Task
+          <mat-icon>check small</mat-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

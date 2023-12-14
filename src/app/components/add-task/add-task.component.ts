@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-task.component.scss'],
 })
 export class AddTaskComponent {
-  myFilter = (d: Date | null): boolean => {
+  dateFilter = (d: Date | null): boolean => {
     const today = new Date();
     today.setHours(0, 0, 0, 0); // Setzt die Stunden, Minuten, Sekunden und Millisekunden auf 0 für den Vergleich.
 
