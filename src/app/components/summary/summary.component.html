@@ -10,6 +10,7 @@
       <div class="todo-done-container">
         <div
           class="todo-done-box"
+          routerLink="/board"
           (mouseenter)="isTodoHovered = true"
           (mouseleave)="isTodoHovered = false"
         >
@@ -23,6 +24,7 @@
 
         <div
           class="todo-done-box"
+          routerLink="/board"
           (mouseenter)="isDoneHovered = true"
           (mouseleave)="isDoneHovered = false"
         >
@@ -36,7 +38,7 @@
       </div>
 
       <div class="urgentContainer">
-        <div class="urgentBox">
+        <div class="urgentBox" routerLink="/board">
           <img src="./assets/img/urgentIconBox.svg" alt="" />
           <div class="counter">
             <span>1</span>
@@ -53,19 +55,19 @@
       </div>
 
       <div class="taskCounterContainer">
-        <div class="taskCounterBox">
+        <div class="taskCounterBox" routerLink="/board">
           <div class="counter">
             <span>5</span>
             <span>Tasks in Board</span>
           </div>
         </div>
-        <div class="taskCounterBox">
+        <div class="taskCounterBox" routerLink="/board">
           <div class="counter">
             <span>2</span>
             <span>Tasks In Progress</span>
           </div>
         </div>
-        <div class="taskCounterBox">
+        <div class="taskCounterBox" routerLink="/board">
           <div class="counter">
             <span>2</span>
             <span>Awaiting Feedback</span>
