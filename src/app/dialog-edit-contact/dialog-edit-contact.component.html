@@ -1,1 +1,47 @@
-<p>dialog-edit-contact works!</p>
+<div class="d-flex">
+  <div class="dialogHeadContainer">
+    <img src="./assets/img/logo.svg" alt="" />
+    <h2>Edit contact</h2>
+    <div class="lineContainer"></div>
+  </div>
+
+  <div class="dialogInputContainer">
+    <div class="closeIconContainer">
+      <mat-icon class="closeIcon" mat-dialog-close>close</mat-icon>
+    </div>
+
+    <div class="d-flex align-center">
+      <img src="./assets/img/user.svg" alt="" />
+      <form action="">
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput />
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Ex. pat@example.com" />
+          <mat-icon matSuffix>mail</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Telephone</mat-label>
+          <input type="tel" matInput />
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div class="submitFormBtnContainer">
+      <button class="cancelBtn" mat-dialog-close>
+        Delete
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button class="createBtn">
+        Save
+        <mat-icon>save</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
