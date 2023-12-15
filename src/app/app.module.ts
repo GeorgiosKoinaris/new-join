@@ -24,6 +24,7 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
 import { DialogAddTaskComponent } from './dialog-add-task/dialog-add-task.component';
 import { DialogAddNewContactComponent } from './dialog-add-new-contact/dialog-add-new-contact.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DialogEditContactComponent } from './dialog-edit-contact/dialog-edit-contact.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     PrivacyPolicyComponent,
     DialogAddTaskComponent,
     DialogAddNewContactComponent,
+    DialogEditContactComponent,
   ],
   imports: [
     BrowserModule,
