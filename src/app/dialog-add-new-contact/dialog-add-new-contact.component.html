@@ -1,1 +1,48 @@
-<p>dialog-add-new-contact works!</p>
+<div class="d-flex">
+  <div class="dialogHeadContainer">
+    <img src="./assets/img/logo.svg" alt="" />
+    <h2>Add contact</h2>
+    <h3>Tasks are better with a team!</h3>
+    <div class="lineContainer"></div>
+  </div>
+
+  <div class="dialogInputContainer">
+    <div class="closeIconContainer">
+      <mat-icon class="closeIcon" mat-dialog-close>close</mat-icon>
+    </div>
+
+    <div class="d-flex align-center">
+      <img src="./assets/img/user.svg" alt="" />
+      <form action="">
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput />
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Ex. pat@example.com" />
+          <mat-icon matSuffix>mail</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Telephone</mat-label>
+          <input type="tel" matInput />
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div class="submitFormBtnContainer">
+      <button class="cancelBtn" mat-dialog-close>
+        Cancel
+        <mat-icon>close</mat-icon>
+      </button>
+      <button class="createBtn">
+        Create Contact
+        <mat-icon>check small</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

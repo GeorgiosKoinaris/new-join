@@ -47,6 +47,10 @@ h1 {
   line-height: unset !important;
 }
 
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: 30px !important;
+}
+
 // .mat-mdc-form-field-bottom-align::before {
 //   content: none !important;
 //   display: none !important;
