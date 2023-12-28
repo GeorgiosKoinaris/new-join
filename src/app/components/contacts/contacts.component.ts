@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogAddNewContactComponent } from 'src/app/dialog-add-new-contact/dialog-add-new-contact.component';
-import { DialogEditContactComponent } from 'src/app/dialog-edit-contact/dialog-edit-contact.component';
+import { DialogAddNewContactComponent } from 'src/app/components/dialog-add-new-contact/dialog-add-new-contact.component';
+import { DialogEditContactComponent } from 'src/app/components/dialog-edit-contact/dialog-edit-contact.component';
 
 @Component({
   selector: 'app-contacts',

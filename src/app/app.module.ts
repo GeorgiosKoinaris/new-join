@@ -21,10 +21,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { HelpUserComponent } from './components/help-user/help-user.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
-import { DialogAddTaskComponent } from './dialog-add-task/dialog-add-task.component';
-import { DialogAddNewContactComponent } from './dialog-add-new-contact/dialog-add-new-contact.component';
+import { DialogAddTaskComponent } from './components/dialog-add-task/dialog-add-task.component';
+import { DialogAddNewContactComponent } from './components/dialog-add-new-contact/dialog-add-new-contact.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DialogEditContactComponent } from './dialog-edit-contact/dialog-edit-contact.component';
+import { DialogEditContactComponent } from './components/dialog-edit-contact/dialog-edit-contact.component';
 
 @NgModule({
   declarations: [
