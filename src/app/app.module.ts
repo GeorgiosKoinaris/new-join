@@ -24,7 +24,12 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
 import { DialogAddTaskComponent } from './components/dialog-add-task/dialog-add-task.component';
 import { DialogAddNewContactComponent } from './components/dialog-add-new-contact/dialog-add-new-contact.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 import { DialogEditContactComponent } from './components/dialog-edit-contact/dialog-edit-contact.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -55,6 +60,10 @@ import { DialogEditContactComponent } from './components/dialog-edit-contact/dia
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent],

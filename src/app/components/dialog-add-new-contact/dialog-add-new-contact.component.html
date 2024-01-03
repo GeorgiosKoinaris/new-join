@@ -13,28 +13,34 @@
 
     <div class="d-flex align-center">
       <img src="./assets/img/user.svg" alt="" />
-      <form action="">
+      <form type="submit">
         <mat-form-field class="example-full-width">
           <mat-label>First Name</mat-label>
-          <input matInput />
+          <input name="firstName" matInput [(ngModel)]="contact.firstName" />
           <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
           <mat-label>Last Name</mat-label>
-          <input matInput />
+          <input name="lastName" matInput [(ngModel)]="contact.lastName" />
           <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
           <mat-label>Email</mat-label>
-          <input type="email" matInput placeholder="Ex. pat@example.com" />
+          <input
+            name="email"
+            type="email"
+            matInput
+            [(ngModel)]="contact.email"
+            placeholder="Ex. pat@example.com"
+          />
           <mat-icon matSuffix>mail</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
           <mat-label>Telephone</mat-label>
-          <input type="tel" matInput />
+          <input name="phone" type="tel" matInput [(ngModel)]="contact.phone" />
           <mat-icon matSuffix>mode_edit</mat-icon>
         </mat-form-field>
       </form>
@@ -45,7 +51,12 @@
         Cancel
         <mat-icon>close</mat-icon>
       </button>
-      <button class="createBtn">
+      <button
+        type="submit"
+        class="createBtn"
+        (click)="createContact()"
+        mat-dialog-close
+      >
         Create Contact
         <mat-icon>check small</mat-icon>
       </button>
