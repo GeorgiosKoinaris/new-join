@@ -21,4 +21,8 @@ export class ContactService {
         console.log(err);
       });
   }
+
+  deleteContactService() {}
+  updateContactService() {}
+  readContactService() {}
 }
