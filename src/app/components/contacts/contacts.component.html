@@ -10,6 +10,7 @@
       <div
         class="contact"
         *ngFor="let contact of contactService.contactData | async"
+        (click)="showContactInfo(contact)"
       >
         <div class="contactImg">
           <span>{{ contact.firstName.charAt(0) }}</span>
@@ -32,11 +33,16 @@
       <div>Better with a team</div>
     </div>
 
-    <div>
+    <div *ngIf="selectedContact">
       <div class="firstinfoContainer">
-        <div class="contactImgBig">AM</div>
+        <div class="contactImgBig">
+          <span>{{ selectedContact.firstName.charAt(0) }}</span>
+          <span>{{ selectedContact.lastName.charAt(0) }}</span>
+        </div>
         <div class="nameAndEditContainer">
-          <div class="contactName">Anton Mayer</div>
+          <div class="contactName">
+            {{ selectedContact.firstName }} {{ selectedContact.lastName }}
+          </div>
           <div class="editButtonsContainer">
             <div class="contactButtons" (click)="openDialogToEditContact()">
               <img src="./assets/img/edit.svg" alt="" />
@@ -54,11 +60,11 @@
 
       <div class="mailText">
         <div><b>Email</b></div>
-        <div class="contactMail">antom@test.com</div>
+        <div class="contactMail">{{ selectedContact.email }}</div>
       </div>
       <div class="phoneText">
         <div><b>Phone</b></div>
-        <div>+49 1111 111 11 1</div>
+        <div>{{ selectedContact.phone }}</div>
       </div>
     </div>
   </div>

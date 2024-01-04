@@ -10,6 +10,8 @@ import { ContactService } from 'src/app/services/contact.service';
   styleUrls: ['./contacts.component.scss'],
 })
 export class ContactsComponent {
+  selectedContact: any;
+
   constructor(
     public dialog: MatDialog,
     public contactService: ContactService
@@ -17,6 +19,10 @@ export class ContactsComponent {
 
   ngOnInit() {
     this.contactService.getContactService();
+  }
+
+  showContactInfo(contact: any) {
+    this.selectedContact = contact;
   }
 
   openDialogToAddContact() {
