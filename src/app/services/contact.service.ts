@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Firestore, addDoc, collection } from '@angular/fire/firestore';
+import {
+  Firestore,
+  addDoc,
+  collection,
+  collectionData,
+} from '@angular/fire/firestore';
 import { Contact } from '../models/contact';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ContactService {
+  contactData!: Observable<any>;
   collectionInstance = collection(this.firestore, 'contacts');
 
   constructor(private firestore: Firestore) {}
@@ -22,7 +29,13 @@ export class ContactService {
       });
   }
 
-  deleteContactService() {}
+  getContactService() {
+    // collectionData(this.collectionInstance).subscribe((val) => {
+    //   console.log(val);
+    // });
+    this.contactData = collectionData(this.collectionInstance);
+  }
+
   updateContactService() {}
-  readContactService() {}
+  deleteContactService() {}
 }

@@ -7,15 +7,24 @@
     </div>
     <div>
       <h2>A</h2>
-      <div class="contact">
-        <div class="contactImg">AM</div>
+      <div
+        class="contact"
+        *ngFor="let contact of contactService.contactData | async"
+      >
+        <div class="contactImg">
+          <span>{{ contact.firstName.charAt(0) }}</span>
+          <span>{{ contact.lastName.charAt(0) }}</span>
+        </div>
         <div class="m-left">
-          <div class="contactName">Anton Mayer</div>
-          <div class="contactMail">antom@test.com</div>
+          <div class="contactName">
+            {{ contact.firstName }} {{ contact.lastName }}
+          </div>
+          <div class="contactMail">{{ contact.email }}</div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="contactContainer">
     <div class="headline">
       <h1>Contacts</h1>
