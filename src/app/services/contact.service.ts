@@ -4,6 +4,8 @@ import {
   addDoc,
   collection,
   collectionData,
+  doc,
+  updateDoc,
 } from '@angular/fire/firestore';
 import { Contact } from '../models/contact';
 import { Observable } from 'rxjs';
@@ -18,11 +20,13 @@ export class ContactService {
   constructor(private firestore: Firestore) {}
 
   addContactService(contact: Contact) {
-    console.log('New contact is:', contact);
-
     addDoc(this.collectionInstance, contact.toJSON())
-      .then(() => {
-        console.log('Contact saved successfully');
+      .then((docRef) => {
+        const contactId = docRef.id;
+        const updatedData = { contactId };
+
+        const docInstance = doc(this.firestore, 'contacts', contactId);
+        updateDoc(docInstance, updatedData);
       })
       .catch((err) => {
         console.log(err);
@@ -30,9 +34,6 @@ export class ContactService {
   }
 
   getContactService() {
-    // collectionData(this.collectionInstance).subscribe((val) => {
-    //   console.log(val);
-    // });
     this.contactData = collectionData(this.collectionInstance);
   }
 

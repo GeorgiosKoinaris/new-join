@@ -3,12 +3,14 @@ export class Contact {
   lastName: string;
   email: string;
   phone: number;
+  contactId: string;
 
   constructor(obj?: any) {
     this.firstName = obj ? obj.firstName : '';
     this.lastName = obj ? obj.lastName : '';
     this.email = obj ? obj.email : '';
     this.phone = obj ? obj.phone : '';
+    this.contactId = obj ? obj.contactId : null;
   }
 
   public toJSON() {
@@ -17,6 +19,7 @@ export class Contact {
       lastName: this.lastName,
       email: this.email,
       phone: this.phone,
+      contactId: this.contactId,
     };
   }
 }
