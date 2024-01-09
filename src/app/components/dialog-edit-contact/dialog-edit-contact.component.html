@@ -15,36 +15,63 @@
       <form action="">
         <mat-form-field class="example-full-width">
           <mat-label>First Name</mat-label>
-          <input matInput />
+          <input
+            matInput
+            [(ngModel)]="selectedContact.firstName"
+            name="firstName"
+          />
           <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
           <mat-label>Last Name</mat-label>
-          <input matInput />
+          <input
+            matInput
+            [(ngModel)]="selectedContact.lastName"
+            name="lastName"
+          />
           <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
           <mat-label>Email</mat-label>
-          <input type="email" matInput placeholder="Ex. pat@example.com" />
+          <input
+            type="email"
+            matInput
+            [(ngModel)]="selectedContact.email"
+            name="email"
+            placeholder="Ex. pat@example.com"
+          />
           <mat-icon matSuffix>mail</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
           <mat-label>Telephone</mat-label>
-          <input type="tel" matInput />
+          <input
+            type="tel"
+            matInput
+            [(ngModel)]="selectedContact.phone"
+            name="phone"
+          />
           <mat-icon matSuffix>mode_edit</mat-icon>
         </mat-form-field>
       </form>
     </div>
 
     <div class="submitFormBtnContainer">
-      <button class="cancelBtn" mat-dialog-close>
+      <button
+        class="cancelBtn"
+        mat-dialog-close
+        (click)="deleteContact(selectedContact.contactId)"
+      >
         Delete
         <mat-icon>delete</mat-icon>
       </button>
-      <button class="createBtn">
+      <button
+        class="createBtn"
+        mat-dialog-close
+        (click)="saveContact(selectedContact.contactId)"
+      >
         Save
         <mat-icon>save</mat-icon>
       </button>

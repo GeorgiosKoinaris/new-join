@@ -30,6 +30,14 @@ export class ContactsComponent {
   }
 
   openDialogToEditContact() {
-    this.dialog.open(DialogEditContactComponent);
+    const dialogRef = this.dialog.open(DialogEditContactComponent, {
+      data: { selectedContact: this.selectedContact },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result === null) {
+        this.selectedContact = null;
+      }
+    });
   }
 }

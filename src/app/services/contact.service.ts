@@ -6,6 +6,7 @@ import {
   collectionData,
   doc,
   updateDoc,
+  deleteDoc,
 } from '@angular/fire/firestore';
 import { Contact } from '../models/contact';
 import { Observable } from 'rxjs';
@@ -37,6 +38,32 @@ export class ContactService {
     this.contactData = collectionData(this.collectionInstance);
   }
 
-  updateContactService() {}
-  deleteContactService() {}
+  getSingleContactService() {
+    this.contactData = collectionData(this.collectionInstance, {
+      idField: 'contactId',
+    });
+  }
+
+  updateContactService(contactId: string, updatedData: any) {
+    const docInstance = doc(this.firestore, 'contacts', contactId);
+
+    updateDoc(docInstance, updatedData)
+      .then(() => {
+        console.log('update successfull');
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  deleteContactService(contactId: string) {
+    const docInstance = doc(this.firestore, 'contacts', contactId);
+    deleteDoc(docInstance)
+      .then(() => {
+        console.log('document was deleted successfully');
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 }
